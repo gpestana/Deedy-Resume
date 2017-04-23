@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Gonçalo}{Pestana}{ \urlstyle{same}\href{http://gpestana.com}{gpestana.com}\\
+\href{mailto:g6pestana@gmail.com}{g6pestana@gmail.com} | +358 442 387 316
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{AALTO UNIVERSITY}
+\descript{MEng in Computer Science}
+\location{2012 - 2016 | Helsinki, FI}
+\location{ Cum. GPA: 3.8/5}
+\sectionsep
+
+\subsection{LISBON TECHNICAL UNI.}
+\descript{BS IN NETWORKS ENGINEERING}
+\location{2008 - 2012 | Lisbon, PT}
+\location{ Cum. GPA: 16.2/20 (top2 in class)}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/gpestana}{\bf gpestana} \\
+NPM:// \href{https://www.npmjs.com/~gpestana}{\bf gpestana} \\
+LinkedIn://  \href{https://fi.linkedin.com/in/gpestana}{\bf Gonçalo Pestana} \\
+Twitter://  \href{https://twitter.com/gpestana}{\bf @gpestana} \\
+WWW://  \href{http://gpestana.com}{\bf gpestana.com} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Node.js \textbullet{} Javascript \textbullet{} Python \textbullet{} NoSQL \\
+Docker \textbullet{} Amazon AWS \textbullet{} Elasticsearch \\
+RabbitMQ \textbullet{} React.js \textbullet{} Linux \textbullet{} git \\ 
+ELK stack \textbullet{} HTTP and TCP/IP stack 
+\sectionsep
+
+\subsection{Others}
+Security \textbullet{} Microservices \textbullet{} Work in distributed teams \textbullet{} Communication with technical and non-technical stakeholders \\ Scrum  
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     INTERESTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interests}
+Distributed Systems \textbullet{} Software architecture \textbullet{} InfoSec \textbullet{} Open source \\ 
+Rock climbing  
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{F-Secure}
+\descript{| Software Engineer }
+\location{Feb 2016 - Present | Helsinki, FI}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\begin{tightemize}
+
+\item Part of the backend team which built and maintained a data pipeline and platform for enriching and storing security data from thousands of endpoints. The data pipeline was built with dozens of microservices and handled TBs of data per day, with potential for scaling up more. 
+
+\item \textbf{Responsabilities}: Software development; Systems architecture; Devops and troubleshooting of production systems; Serving several teams/clients which were dependent on the backend. 
+
+\item \textbf{Technologies}: Node.js, Python, Docker, ELK stack(Elasticsearch, Logstash, Kibana), Influxdb, Amazon Web Services (AWS), RabbitMQ
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Software Consultancy}
+\descript{| Software engineer and web developer  }
+\location{August 2013 – | Helsinki, FI and Remote}
+\begin{tightemize}
+
+\item Worked and collaborated on projects of software engineering, service architecture, web development and devops.
+
+\item \textbf{Companies}: Eduze (\textit{eduze.com}), Catchbox (\textit{getcatchbox.com}), C. Sao Tomas \textit{(colegiodestomas.com}),  NorthImpact (\textit{northimpact.com})
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Fivestars}
+\descript{| Software Engineer Co-Op }
+\location{May 2015 - August 2015 | San Francisco, CA}
+\begin{tightemize}
+
+\item Started company-wide analytics pipeline. The data was gathered from multiple data sources, parsed and channeled to multiple consumers. Frontend to display data a compeling way to different teams.
+
+\item \textbf{Technologies}: Python, InfluxDB, ELKstack (ElasticSearch, Logstash, Kibana), Grafana, statsd and Angular.js.
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CERN - THE EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH}
+\descript{| Software Engineer \& Research Intern }
+\location{March 2013 – May 2014 | Helsinki, FI and Geneve, CH}
+\begin{tightemize}
+
+\item Conducted research on how heterogeneous hardware can improve energy efficiency of scientific computing at CERN.
+
+\item Published part of the work on the ACAT 2014 conference journal.
+
+\item \textbf{Technologies}: Python, Intel RAPL, TI231 chip, ARMv7 and ARMv9 archs.
+
+
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{CERN}
+\descript{| Software Engineer \& Research Intern }
+\location{March 2013 – May 2014 | Helsinki, FI and Geneve, CH}
+Techniques and tools for measuring energy efficiency of scientific software applications. Published at the \textit{16th International workshop on Advanced Computing and Analysis Techniques in physics research (ACAT2014)}
+\sectionsep
+
+\runsubsection{AALTO UNIVERSITY}
+\descript{| Research Assistant}
+\location{June 2013 – August 2013 | Helsinki, FI}
+Test and implementation of recently published mathematical scheduling algorithm for sensor networks. Technologies: Python, advanced data structures and algorithms.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tabular}{rll}
+%2014	     & top 52/2500  & KPCB Engineering Fellow\\
+%2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+%2013	     & National  & Jump Trading Challenge Finalist\\
+%2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+%2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+%2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Publications} 
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+%\bibliographystyle{abbrv}
+%\bibliography{publications}
+%%\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
